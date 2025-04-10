@@ -1,0 +1,5 @@
+
+Iteration= 1 ::Time= 4560400 nanosegundos
+Iteration= 2 ::Time= 157100 nanosegundos
+Iteration= 3 ::Time= 110400 nanosegundos
+Iteration= 4 ::Time= 175000 nanosegundos

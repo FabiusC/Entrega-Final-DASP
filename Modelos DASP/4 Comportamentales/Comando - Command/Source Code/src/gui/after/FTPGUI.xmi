@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:uml="http://www.eclipse.org/uml2/2.0.0/UML">
+  <uml:Model xmi:id="FTPGUI_Model" name="FTPGUI">
+    <packagedElement xmi:type="uml:Class" xmi:id="FTPGUI" name="FTPGUI">
+      <ownedAttribute xmi:id="FTPGUI_newline" name="newline" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="http://www.eclipse.org/uml2/2.0.0/UML#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="FTPGUI_UPLOAD" name="UPLOAD" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="http://www.eclipse.org/uml2/2.0.0/UML#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="FTPGUI_DOWNLOAD" name="DOWNLOAD" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="http://www.eclipse.org/uml2/2.0.0/UML#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="FTPGUI_DELETE" name="DELETE" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="http://www.eclipse.org/uml2/2.0.0/UML#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="FTPGUI_EXIT" name="EXIT" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="http://www.eclipse.org/uml2/2.0.0/UML#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="FTPGUI_pnlFTPUI" name="pnlFTPUI" visibility="private">
+        <type xmi:type="uml:Class" href="http://www.eclipse.org/uml2/2.0.0/UML#JPanel"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="FTPGUI_localList" name="localList" visibility="private">
+        <type xmi:type="uml:Class" href="http://www.eclipse.org/uml2/2.0.0/UML#JList"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="FTPGUI_remoteList" name="remoteList" visibility="private">
+        <type xmi:type="uml:Class" href="http://www.eclipse.org/uml2/2.0.0/UML#JList"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="FTPGUI_defLocalList" name="defLocalList" visibility="private">
+        <type xmi:type="uml:Class" href="http://www.eclipse.org/uml2/2.0.0/UML#DefaultListModel"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="FTPGUI_defRemoteList" name="defRemoteList" visibility="private">
+        <type xmi:type="uml:Class" href="http://www.eclipse.org/uml2/2.0.0/UML#DefaultListModel"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="FTPGUI_btnUpload" name="btnUpload" visibility="private">
+        <type xmi:type="uml:Class" xmi:id="UploadButton" name="UploadButton"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="FTPGUI_btnDownload" name="btnDownload" visibility="private">
+        <type xmi:type="uml:Class" xmi:id="DownloadButton" name="DownloadButton"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="FTPGUI_btnDelete" name="btnDelete" visibility="private">
+        <type xmi:type="uml:Class" xmi:id="DeleteButton" name="DeleteButton"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="FTPGUI_constructor" name="FTPGUI" visibility="public">
+        <ownedParameter xmi:id="FTPGUI_constructor_exception" name="exception" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="http://www.eclipse.org/uml2/2.0.0/UML#Exception"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="FTPGUI_initialize" name="initialize" visibility="private">
+        <ownedParameter xmi:id="FTPGUI_initialize_void" name="void" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="http://www.eclipse.org/uml2/2.0.0/UML#Void"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="FTPGUI_main" name="main" visibility="public" isStatic="true">
+        <ownedParameter xmi:id="FTPGUI_main_args" name="args" direction="in">
+          <type xmi:type="uml:PrimitiveType" href="http://www.eclipse.org/uml2/2.0.0/UML#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="FTPGUI_main_exception" name="exception" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="http://www.eclipse.org/uml2/2.0.0/UML#Exception"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+
+    <packagedElement xmi:type="uml:Interface" xmi:id="CommandInterface" name="CommandInterface">
+      <ownedOperation xmi:id="CommandInterface_processEvent" name="processEvent" visibility="public">
+        <ownedParameter xmi:id="CommandInterface_processEvent_void" name="void" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="http://www.eclipse.org/uml2/2.0.0/UML#Void"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+
+    <packagedElement xmi:type="uml:Class" xmi:id="buttonHandler" name="buttonHandler">
+      <ownedOperation xmi:id="buttonHandler_actionPerformed" name="actionPerformed" visibility="public">
+        <ownedParameter xmi:id="buttonHandler_actionPerformed_e" name="e" direction="in">
+          <type xmi:type="uml:Class" href="http://www.eclipse.org/uml2/2.0.0/UML#ActionEvent"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="buttonHandler_actionPerformed_void" name="void" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="http://www.eclipse.org/uml2/2.0.0/UML#Void"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+
+    <packagedElement xmi:type="uml:Class" xmi:id="UploadButton" name="UploadButton">
+      <interfaceRealization xmi:id="UploadButton_CommandInterface" contract="CommandInterface"/>
+      <ownedOperation xmi:id="UploadButton_processEvent" name="processEvent" visibility="public">
+        <ownedParameter xmi:id="UploadButton_processEvent_void" name="void" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="http://www.eclipse.org/uml2/2.0.0/UML#Void"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="UploadButton_constructor" name="UploadButton" visibility="public">
+        <ownedParameter xmi:id="UploadButton_constructor_name" name="name" direction="in">
+          <type xmi:type="uml:PrimitiveType" href="http://www.eclipse.org/uml2/2.0.0/UML#String"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+
+    <packagedElement xmi:type="uml:Class" xmi:id="DownloadButton" name="DownloadButton">
+      <interfaceRealization xmi:id="DownloadButton_CommandInterface" contract="CommandInterface"/>
+      <ownedOperation xmi:id="DownloadButton_processEvent" name="processEvent" visibility="public">
+        <ownedParameter xmi:id="DownloadButton_processEvent_void" name="void" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="http://www.eclipse.org/uml2/2.0.0/UML#Void"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="DownloadButton_constructor" name="DownloadButton" visibility="public">
+        <ownedParameter xmi:id="DownloadButton_constructor_name" name="name" direction="in">
+          <type xmi:type="uml:PrimitiveType" href="http://www.eclipse.org/uml2/2.0.0/UML#String"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+
+    <packagedElement xmi:type="uml:Class" xmi:id="DeleteButton" name="DeleteButton">
+      <interfaceRealization xmi:id="DeleteButton_CommandInterface" contract="CommandInterface"/>
+      <ownedOperation xmi:id="DeleteButton_processEvent" name="processEvent" visibility="public">
+        <ownedParameter xmi:id="DeleteButton_processEvent_void" name="void" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="http://www.eclipse.org/uml2/2.0.0/UML#Void"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="DeleteButton_constructor" name="DeleteButton" visibility="public">
+        <ownedParameter xmi:id="DeleteButton_constructor_name" name="name" direction="in">
+          <type xmi:type="uml:PrimitiveType" href="http://www.eclipse.org/uml2/2.0.0/UML#String"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+
+    <packagedElement xmi:type="uml:Class" xmi:id="ExitButton" name="ExitButton">
+      <interfaceRealization xmi:id="ExitButton_CommandInterface" contract="CommandInterface"/>
+      <ownedOperation xmi:id="ExitButton_processEvent" name="processEvent" visibility="public">
+        <ownedParameter xmi:id="ExitButton_processEvent_void" name="void" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="http://www.eclipse.org/uml2/2.0.0/UML#Void"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="ExitButton_constructor" name="ExitButton" visibility="public">
+        <ownedParameter xmi:id="ExitButton_constructor_name" name="name" direction="in">
+          <type xmi:type="uml:PrimitiveType" href="http://www.eclipse.org/uml2/2.0.0/UML#String"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+
+    <!-- Relationships -->
+    <packagedElement xmi:type="uml:Generalization" xmi:id="FTPGUI_JFrame" source="FTPGUI" target="JFrame"/>
+    <packagedElement xmi:type="uml:Generalization" xmi:id="buttonHandler_ActionListener" source="buttonHandler" target="ActionListener"/>
+    <packagedElement xmi:type="uml:Generalization" xmi:id="UploadButton_JButton" source="UploadButton" target="JButton"/>
+    <packagedElement xmi:type="uml:Generalization" xmi:id="DownloadButton_JButton" source="DownloadButton" target="JButton"/>
+    <packagedElement xmi:type="uml:Generalization" xmi:id="DeleteButton_JButton" source="DeleteButton" target="JButton"/>
+    <packagedElement xmi:type="uml:Generalization" xmi:id="ExitButton_JButton" source="ExitButton" target="JButton"/>
+  </uml:Model>
+</xmi:XMI> 
